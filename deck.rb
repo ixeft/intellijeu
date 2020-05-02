@@ -11,10 +11,10 @@ Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout
   frames = deck['Type'].map {|x| "Frame#{x}"}
   types = deck['Type'].map {|x| "Type#{x}"}
 
-  cut_zone radius: 25,  stroke_color: :white
   rect layout: :outerframe
   rect layout: frames
-  #safe_zone radius: 0, stroke_color: :red
+  #cut_zone radius: 25,  stroke_color: :white
+  safe_zone radius: 0, stroke_color: :red, margin: '3mm'
   rect layout: :DescRectShadow
   rect layout: :DescRect
 
