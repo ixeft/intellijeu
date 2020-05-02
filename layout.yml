@@ -1,0 +1,123 @@
+text:
+  x: 113
+  width: 600
+
+frame:
+  x: 38
+  y: 38
+  width: 750
+  height: 1050
+  radius: 25
+
+#https://htmlcolors.com/
+FrameCompetence:
+  extends: frame
+  fill_color: "#81d4fa" 
+
+FrameMateriel:
+  extends: frame
+  fill_color: "#ffcc80"
+
+FrameTerrain:
+  extends: frame
+  fill_color: "#d7ccc8"
+
+FrameRisque:
+  extends: frame
+  fill_color: "#e57373"
+
+FrameMecanique:
+  extends: frame
+  fill_color: "#a5d6a7"
+Type:
+  x: 670
+  y: 80
+  width: 70
+  height: 70
+
+Niveau:
+  x: 80
+  y: 80
+  width: 70
+  height: 70
+
+Niveau1:
+  extends: Niveau
+  file: icons/inverted-dice-1.svg
+
+Niveau2:
+  extends: Niveau
+  file: icons/inverted-dice-2.svg
+
+Niveau3:
+  extends: Niveau
+  file: icons/inverted-dice-3.svg
+
+TypeCompetence:
+  extends: Type
+  file: icons/brain.svg
+
+TypeMateriel:
+  extends: Type
+  file: icons/swiss-army-knife.svg
+
+TypeRisque:
+  extends: Type
+  file: icons/hazard-sign.svg
+
+TypeMecanique:
+  extends: Type
+  file: icons/brain.svg
+
+TypeTerrain:
+  extends: Type
+  file: icons/hill-conquest.svg 
+
+
+
+
+Icone:
+  x: 187
+  y: 75
+  width: 475
+  height: 475
+
+
+DescRect:
+  extends: text
+  y: 550 
+  height: 300
+  fill_color: white 
+  stroke_color: white
+  radius: 30
+
+DescRectShadow:
+  extends : DescRect
+  x: +=5
+  y: +=5 
+  fill_color: black
+  stroke_color: black
+  radius: 30
+
+Titre:
+  extends: text
+  font: Lobster,Sans 18
+  y: 550 
+  height: 100
+  align: center
+
+Description:
+  extends: text
+  font: Dosis, Sans 12
+  y: 650
+  height: 200
+  align: center
+
+Exemple:
+  extends: text
+  font: Karma Italic 12
+  y: 875
+  height: 150
+  align: center
+
+

@@ -8,6 +8,7 @@ GEM
       cairo (>= 1.16.2)
       glib2 (= 3.4.1)
     classy_hash (0.2.1)
+    game_icons (0.43.0.20191126)
     gdk_pixbuf2 (3.4.1)
       gio2 (= 3.4.1)
     gio2 (3.4.1)
@@ -53,6 +54,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  game_icons
   rake
   squib
 

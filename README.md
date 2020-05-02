@@ -8,6 +8,10 @@ install deps
 bundle install
 ```
 
+Install font
+- Lobster
+- Dosis
+
 ## Compile cardgame
 
 ```
