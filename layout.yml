@@ -1,36 +1,50 @@
 text:
-  x: 113
-  width: 600
+  x: 115
+  width: 500
 
-frame:
+outerframe:
   x: 38
   y: 38
-  width: 750
-  height: 1050
+  width: 655
+  height: 1045
   radius: 25
+
+frame:
+  extends: outerframe
+  x: += 20
+  y: += 20
+  width: -= 40
+  height: -= 40
+  radius: 10
 
 #https://htmlcolors.com/
 FrameCompetence:
   extends: frame
   fill_color: "#81d4fa" 
+  stroke_color: "#81d4fa"  
 
 FrameMateriel:
   extends: frame
   fill_color: "#ffcc80"
-
+  stroke_color: "#ffcc80"
+    
 FrameTerrain:
   extends: frame
   fill_color: "#d7ccc8"
+  stroke_color: "#d7ccc8"
 
 FrameRisque:
   extends: frame
   fill_color: "#e57373"
+  stroke_color: "#e57373"
 
 FrameMecanique:
   extends: frame
   fill_color: "#a5d6a7"
+  stroke_color: "#a5d6a7"
+
 Type:
-  x: 670
+  x: 580
   y: 80
   width: 70
   height: 70
@@ -77,10 +91,10 @@ TypeTerrain:
 
 
 Icone:
-  x: 187
+  x: 138
   y: 75
-  width: 475
-  height: 475
+  width: 455
+  height: 455
 
 
 DescRect:
