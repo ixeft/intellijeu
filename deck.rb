@@ -19,7 +19,7 @@ Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout
   rect layout: :DescRect
 
   %w(Titre Description Exemple).each do |key|
-    #rect layout: key
+    rect layout: key
     text str: deck[key], layout: key
   end
 
