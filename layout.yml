@@ -10,6 +10,7 @@ outerframe:
   height: 1086
   radius: 25
 
+
 frame:
   extends: outerframe
   x: += 2.5mm
@@ -18,32 +19,46 @@ frame:
   height: -= 5mm
   radius: 10
 
+FrameBlackAndWhite:
+  extends: frame
+  stroke_color: "#000000"
+  fill_color: "#F4F4F4" 
+
+FrameBack:
+  extends: frame
+  fill_color: "#F4F4F4" 
+
+FrameBackBlackAndWhite:
+  extends: frame
+  fill_color: "#F4F4F4" 
+
 #https://htmlcolors.com/
 FrameCompetence:
   extends: frame
   fill_color: "#81d4fa" 
   stroke_color: "#81d4fa"  
+  #brains
 
 FrameMateriel:
   extends: frame
   fill_color: "#ffcc80"
   stroke_color: "#ffcc80"
-    
+  #swiss
 FrameTerrain:
   extends: frame
-  fill_color: "#d7ccc8"
-  stroke_color: "#d7ccc8"
-
+  fill_color: "#a1887f"
+  stroke_color: "#a1887f"
+  #hill
 FrameRisque:
   extends: frame
   fill_color: "#e57373"
   stroke_color: "#e57373"
-
+  #hazard
 FrameMecanique:
   extends: frame
   fill_color: "#a5d6a7"
   stroke_color: "#a5d6a7"
-
+  #gears
 Type:
   x: 580
   y: 40
@@ -68,25 +83,25 @@ Niveau3:
   extends: Niveau
   file: icons/inverted-dice-3.svg
 
-TypeCompetence:
-  extends: Type
-  file: icons/brain.svg
-
-TypeMateriel:
-  extends: Type
-  file: icons/swiss-army-knife.svg
-
-TypeRisque:
-  extends: Type
-  file: icons/hazard-sign.svg
-
-TypeMecanique:
-  extends: Type
-  file: icons/brain.svg
-
-TypeTerrain:
-  extends: Type
-  file: icons/hill-conquest.svg 
+  #TypeCompetence:
+  #  extends: Type
+  ##  file: icons/brain.svg
+  #  
+  #TypeMateriel:
+  #  extends: Type
+  #  #  file: icons/swiss-army-knife.svg
+  #
+  #TypeRisque:
+  #  extends: Type
+  #  #  file: icons/hazard-sign.svg
+  #
+  #TypeMecanique:
+  #  extends: Type
+  #  #  file: icons/gears.svg
+  #
+  #TypeTerrain:
+  #  extends: Type
+  #  #  file: icons/hill-conquest.svg 
 
 
 
@@ -128,9 +143,23 @@ Description:
 
 Exemple:
   extends: text
-  font: Karma Italic 10
+  font: Karma Italic 9
   y: +=330
   height: 180
   align: center
+  color: "#3D4E59"
 
+TitreBack:
+  x: 74 
+  y: 520
+  width: 548
+  height: 80
+  font: Lobster,Sans 15
+  align: center
 
+IconeBack:
+  extends: TitreBack
+  width: 422
+  height: 422
+  y : -= 170
+  x : += 50
