@@ -18,7 +18,7 @@ type_icons_color = {
 
 
 deck = Squib.xlsx file: 'mecaniscout.xlsx'
-colored = false
+colored = true
 icone_fg_color = colored ? "#FFFFFF" : "#AAAAAA"
 type_icon_mono_fg_color = "#555555" 
 Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout: 'layout.yml') do
@@ -56,7 +56,8 @@ Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout
 
   svg data: icones, layout: :Icone
 
-  save_pdf file: colored ? "intellijeu_front_color.pdf" : "intellijeu_front_monochrome.pdf", sprue: 'a4_euro_card.yml'
+  save format: :png, prefix: deck['Titre']
+  #save_pdf file: colored ? "intellijeu_front_color.pdf" : "intellijeu_front_monochrome.pdf", sprue: 'a4_euro_card.yml'
 end
 
 Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout: 'layout.yml') do
