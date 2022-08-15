@@ -18,7 +18,13 @@ type_icons_color = {
 
 
 deck = Squib.xlsx file: 'intellijeu.xlsx'
+rules = Squib.xlsx file: 'rules.xlsx'
 colored = true
+if ARGV.length > 0 and ARGV[0].start_with?("mono")
+  colored = false
+  puts "Back and white cards"
+end
+
 icone_fg_color = colored ? "#FFFFFF" : "#AAAAAA"
 type_icon_mono_fg_color = "#555555" 
 Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout: 'layout.yml') do
@@ -68,4 +74,21 @@ Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout
   text str: "IntelliJeu", layout: :TitreBack
 
   save_pdf file: colored ? "intellijeu_back_color.pdf" : "intellijeu_back_monochrome.pdf", sprue: 'a4_euro_card.yml'
+end
+
+
+Squib::Deck.new(cards: rules['Title'].size, width: '59mm', height: '92mm', layout: 'layout.yml') do
+  rect layout: :outerframe
+  #rect layout: colored ? :frame : :FrameBlackAndWhite
+  rect layout: :frame
+
+  #svg data: GameIcons.get("shatter").recolor(bg_opacity: 0, fg: "#FFFFFF" ).string, layout: :IconeBack
+  
+  rules['Content'].each { |str| str.gsub! /%n/, "\n" }
+  %w(Title Content).each do |key|
+    #rect layout: key
+    text str: rules[key], layout: key + "Rule"
+  end
+
+  save_pdf file: colored ? "intellijeu_rules_front_color.pdf" : "intellijeu_rules_front_monochrome.pdf", sprue: 'a4_euro_card.yml'
 end

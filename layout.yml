@@ -163,3 +163,24 @@ IconeBack:
   height: 422
   y : -= 170
   x : += 50
+
+# Rules cards
+textRule:
+  x: 74
+  y: 60
+  width: 548
+  height: 80
+  #align: center
+
+TitleRule:
+  extends: textRule
+  font: Lobster,Sans 15
+  height: 80
+  align: center
+
+ContentRule:
+  extends: textRule
+  font: Dosis, Sans 8
+  y: += 80
+  height: 880
+  justify: true
