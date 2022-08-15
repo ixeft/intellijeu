@@ -17,7 +17,7 @@ type_icons_color = {
 }
 
 
-deck = Squib.xlsx file: 'mecaniscout.xlsx'
+deck = Squib.xlsx file: 'intellijeu.xlsx'
 colored = true
 icone_fg_color = colored ? "#FFFFFF" : "#AAAAAA"
 type_icon_mono_fg_color = "#555555" 
