@@ -27,6 +27,8 @@ end
 
 icone_fg_color = colored ? "#FFFFFF" : "#AAAAAA"
 type_icon_mono_fg_color = "#555555" 
+
+# Generer les cartes coté recto
 Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout: 'layout.yml') do
   #background color: '#230602'
 
@@ -66,17 +68,7 @@ Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout
   save_pdf file: colored ? "intellijeu_front_color.pdf" : "intellijeu_front_monochrome.pdf", sprue: 'a4_euro_card.yml'
 end
 
-Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout: 'layout.yml') do
-  rect layout: :outerframe
-  rect layout: colored ? :FrameBack : :FrameBackBlackAndWhite
-
-  svg data: GameIcons.get("shatter").recolor(bg_opacity: 0, fg: "#FFFFFF" ).string, layout: :IconeBack
-  text str: "IntelliJeu", layout: :TitreBack
-
-  save_pdf file: colored ? "intellijeu_back_color.pdf" : "intellijeu_back_monochrome.pdf", sprue: 'a4_euro_card.yml'
-end
-
-
+# Générer les règles
 Squib::Deck.new(cards: rules['Title'].size, width: '59mm', height: '92mm', layout: 'layout.yml') do
   rect layout: :outerframe
   #rect layout: colored ? :frame : :FrameBlackAndWhite
@@ -91,4 +83,26 @@ Squib::Deck.new(cards: rules['Title'].size, width: '59mm', height: '92mm', layou
   end
 
   save_pdf file: colored ? "intellijeu_rules_front_color.pdf" : "intellijeu_rules_front_monochrome.pdf", sprue: 'a4_euro_card.yml'
+end
+
+# Generer les cartes coté verso
+Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout: 'layout.yml') do
+  rect layout: :outerframe
+  rect layout: colored ? :FrameBack : :FrameBackBlackAndWhite
+
+  svg data: GameIcons.get("shatter").recolor(bg_opacity: 0, fg: "#FFFFFF" ).string, layout: :IconeBack
+  text str: "IntelliJeu", layout: :TitreBack
+
+  save_pdf file: colored ? "intellijeu_back_color.pdf" : "intellijeu_back_monochrome.pdf", sprue: 'a4_euro_card.yml'
+end
+
+# Generer les cartes règles verso
+Squib::Deck.new(cards: rules['Title'].size, width: '59mm', height: '92mm', layout: 'layout.yml') do
+  rect layout: :outerframe
+  rect layout: colored ? :FrameBackRules : :FrameBackRulesBlackAndWhite
+
+  svg data: GameIcons.get("shatter").recolor(bg_opacity: 0, fg: "#FFFFFF" ).string, layout: :IconeBack
+  text str: "Règle IntelliJeu", layout: :TitreBack
+
+  save_pdf file: colored ? "intellijeu_rules_back_color.pdf" : "intellijeu_rules_back_monochrome.pdf", sprue: 'a4_euro_card.yml'
 end

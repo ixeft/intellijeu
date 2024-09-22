@@ -1,15 +1,14 @@
 text:
-  x: 74 
+  x: 74
   y: 520
   width: 548
 
 outerframe:
-  x: 0 
+  x: 0
   y: 0
   width: 696
   height: 1086
   radius: 25
-
 
 frame:
   extends: outerframe
@@ -22,21 +21,28 @@ frame:
 FrameBlackAndWhite:
   extends: frame
   stroke_color: "#000000"
-  fill_color: "#F4F4F4" 
+  fill_color: "#F4F4F4"
 
 FrameBack:
   extends: frame
-  fill_color: "#e1bee7" 
+  fill_color: "#e1bee7"
 
 FrameBackBlackAndWhite:
   extends: frame
-  fill_color: "#F4F4F4" 
+  fill_color: "#F4F4F4"
 
+FrameBackRules:
+  extends: frame
+  fill_color: "#de98ea"
+
+FrameBackRulesBlackAndWhite:
+  extends: frame
+  fill_color: "#F0F0F0"
 #https://htmlcolors.com/
 FrameCompetence:
   extends: frame
-  fill_color: "#81d4fa" 
-  stroke_color: "#81d4fa"  
+  fill_color: "#81d4fa"
+  stroke_color: "#81d4fa"
   #brains
 
 FrameMateriel:
@@ -86,7 +92,7 @@ Niveau3:
   #TypeCompetence:
   #  extends: Type
   ##  file: icons/brain.svg
-  #  
+  #
   #TypeMateriel:
   #  extends: Type
   #  #  file: icons/swiss-army-knife.svg
@@ -101,10 +107,7 @@ Niveau3:
   #
   #TypeTerrain:
   #  extends: Type
-  #  #  file: icons/hill-conquest.svg 
-
-
-
+  #  #  file: icons/hill-conquest.svg
 
 Icone:
   x: 138
@@ -112,18 +115,17 @@ Icone:
   width: 422
   height: 422
 
-
 DescRect:
   extends: text
   height: 300
-  fill_color: white 
+  fill_color: white
   stroke_color: white
   radius: 30
 
 DescRectShadow:
-  extends : DescRect
+  extends: DescRect
   x: +=5
-  y: +=5 
+  y: +=5
   fill_color: black
   stroke_color: black
   radius: 30
@@ -150,7 +152,7 @@ Exemple:
   color: "#3D4E59"
 
 TitreBack:
-  x: 74 
+  x: 74
   y: 520
   width: 548
   height: 80
@@ -161,8 +163,8 @@ IconeBack:
   extends: TitreBack
   width: 422
   height: 422
-  y : -= 170
-  x : += 50
+  y: -= 170
+  x: += 50
 
 # Rules cards
 textRule:

@@ -2,7 +2,7 @@
 
 # DPI is used in making PDFs and in unit conversions
 # Default: 300
-#dpi: 72
+#dpi: 7,202
 
 #antialias: best #recommended. Only about 10% slower than fast
 #antialias: default # set the anti-aliasing algorithm. default defers to the underlying graphics device. See http://www.cairographics.org/manual/cairo-cairo-t.html#cairo-antialias-t
