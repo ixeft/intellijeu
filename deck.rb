@@ -65,7 +65,7 @@ Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout
   svg data: icones, layout: :Icone
 
   #save format: :png, prefix: deck['Titre']
-  save_pdf file: colored ? "intellijeu_front_color.pdf" : "intellijeu_front_monochrome.pdf", sprue: 'a4_euro_card.yml'
+  save_pdf file: colored ? "intellijeu_front_deck_color.pdf" : "intellijeu_front_deck_monochrome.pdf", sprue: 'a4_euro_card.yml'
 end
 
 # Générer les règles
@@ -82,7 +82,7 @@ Squib::Deck.new(cards: rules['Title'].size, width: '59mm', height: '92mm', layou
     text str: rules[key], layout: key + "Rule"
   end
 
-  save_pdf file: colored ? "intellijeu_rules_front_color.pdf" : "intellijeu_rules_front_monochrome.pdf", sprue: 'a4_euro_card.yml'
+  save_pdf file: colored ? "intellijeu_front_rules_color.pdf" : "intellijeu_front_rules_monochrome.pdf", sprue: 'a4_euro_card.yml'
 end
 
 # Generer les cartes coté verso
@@ -93,7 +93,7 @@ Squib::Deck.new(cards: deck['Titre'].size, width: '59mm', height: '92mm', layout
   svg data: GameIcons.get("shatter").recolor(bg_opacity: 0, fg: "#FFFFFF" ).string, layout: :IconeBack
   text str: "IntelliJeu", layout: :TitreBack
 
-  save_pdf file: colored ? "intellijeu_back_color.pdf" : "intellijeu_back_monochrome.pdf", sprue: 'a4_euro_card.yml'
+  save_pdf file: colored ? "intellijeu_back_deck_color.pdf" : "intellijeu_back_deck_monochrome.pdf", sprue: 'a4_euro_card.yml'
 end
 
 # Generer les cartes règles verso
@@ -104,5 +104,5 @@ Squib::Deck.new(cards: rules['Title'].size, width: '59mm', height: '92mm', layou
   svg data: GameIcons.get("shatter").recolor(bg_opacity: 0, fg: "#FFFFFF" ).string, layout: :IconeBack
   text str: "Règle IntelliJeu", layout: :TitreBack
 
-  save_pdf file: colored ? "intellijeu_rules_back_color.pdf" : "intellijeu_rules_back_monochrome.pdf", sprue: 'a4_euro_card.yml'
+  save_pdf file: colored ? "intellijeu_back_rules_color.pdf" : "intellijeu_back_rules_monochrome.pdf", sprue: 'a4_euro_card.yml'
 end
