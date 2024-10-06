@@ -1,6 +1,6 @@
 #!/bin/bash
 export GEM_HOME=$(pwd)/.gem
-version=v1.0
+version=v1.0.1
 
 if ! command -v bundle &>/dev/null; then
   echo "Please install bundle in order to run this script"
